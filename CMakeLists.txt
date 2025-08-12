@@ -19,7 +19,8 @@ include("${JUCE_SOURCE_DIR}/extras/Build/CMake/JUCEUtils.cmake")
 add_subdirectory(${JUCE_SOURCE_DIR})
 
 # Create the executable
-add_executable(AudioPlayer main.cpp main.hpp)
+add_executable(AudioPlayer main.cpp
+        FileTransportSource.hpp)
 
 # Link JUCE modules explicitly
 target_link_libraries(AudioPlayer PRIVATE
